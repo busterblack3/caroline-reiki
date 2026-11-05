@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a session · Caroline Black Reiki</title>
+  <meta name="description" content="Request a Reiki session with Caroline Black in Durham, NC.">
+  <!-- PROTOTYPE: keeps search engines from indexing placeholder content. Remove at launch. -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F6F3EE">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- PROTOTYPE BANNER: delete this div at launch -->
+  <div class="proto-banner">Prototype for review. Highlighted <strong>[[PLACEHOLDER]]</strong> text is still to be written.</div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="index.html" aria-label="Caroline Black Reiki, home">
+        <span class="wordmark__name">Caroline Black</span>
+        <span class="wordmark__sub">Reiki <span aria-hidden="true">·</span> Durham, NC</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reiki.html">About Reiki</a></li>
+          <li><a href="about.html">About Caroline</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html" class="nav-cta" aria-current="page">Request a session</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+  <header class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1>Request a session</h1>
+      <p class="lede">Tell Caroline a little about yourself and when you’re free. She’ll reply to set a time and send the studio address.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap contact-grid">
+      <!--
+        FORM BACKEND: Formspree (https://formspree.io).
+        Replace PLACEHOLDER_FORM_ID below with the form ID from Buster's Formspree
+        dashboard, e.g. https://formspree.io/f/xyzabcde
+        The destination email is set inside Formspree, not here.
+      -->
+      <form id="contact-form" class="form" action="https://formspree.io/f/PLACEHOLDER_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New Reiki session request">
+        <div class="hp" aria-hidden="true">
+          <label for="gotcha">Leave this field empty</label>
+          <input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone <span class="hint">Optional. Include it if you’d like a call or text back.</span></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+
+        <div class="field">
+          <label for="message">What brings you here? <span class="hint">A sentence or two is plenty. Please don’t include detailed medical information. You can share that in person.</span></label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+
+        <fieldset class="field">
+          <legend>Preferred days</legend>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="days" value="Monday"><span>Mon</span></label>
+            <label class="check"><input type="checkbox" name="days" value="Tuesday"><span>Tue</span></label>
+            <label class="check"><input type="checkbox" name="days" value="Wednesday"><span>Wed</span></label>
+            <label class="check"><input type="checkbox" name="days" value="Thursday"><span>Thu</span></label>
+            <label class="check"><input type="checkbox" name="days" value="Friday"><span>Fri</span></label>
+            <label class="check"><input type="checkbox" name="days" value="Saturday"><span>Sat</span></label>
+            <label class="check"><input type="checkbox" name="days" value="Sunday"><span>Sun</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Preferred times</legend>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="times" value="Morning"><span>Morning</span></label>
+            <label class="check"><input type="checkbox" name="times" value="Afternoon"><span>Afternoon</span></label>
+            <label class="check"><input type="checkbox" name="times" value="Evening"><span>Evening</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="timing">Anything else about timing? <span class="hint">Optional, e.g. “after 3pm on weekdays”</span></label>
+          <input type="text" id="timing" name="timing_notes">
+        </div>
+
+        <button type="submit" class="btn">Send request</button>
+        <div id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+      </form>
+
+      <aside class="aside" aria-labelledby="details-heading">
+        <h2 id="details-heading">Details</h2>
+        <dl>
+          <dt>Where</dt>
+          <dd>Private home studio in Durham, NC. In person only. Address shared after booking.</dd>
+          <dt>Hours</dt>
+          <dd><span class="ph">[[PLACEHOLDER: typical availability, e.g. Tue–Sat, 9am–6pm]]</span></dd>
+          <dt>Reply time</dt>
+          <dd><span class="ph">[[PLACEHOLDER: e.g. within 1–2 business days]]</span></dd>
+          <dt>Email</dt>
+          <dd><span class="ph">[[PLACEHOLDER: public contact email, optional]]</span></dd>
+        </dl>
+        <p style="margin-top:1.5rem;font-size:0.92rem;color:var(--ink-soft)">Reiki is a complementary practice and does not replace medical care. If you’re experiencing a medical emergency, call 911.</p>
+      </aside>
+    </div>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="wordmark" style="padding:0"><span class="wordmark__name">Caroline Black</span><span class="wordmark__sub">Reiki <span aria-hidden="true">·</span> Durham, NC</span></p>
+          <p style="margin-top:1rem">Certified Reiki Master. In-person sessions in a private home studio in Durham, North Carolina.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul>
+            <li><a href="reiki.html">About Reiki</a></li>
+            <li><a href="about.html">About Caroline</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Request a session</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p>Durham, NC<br>Address shared after booking</p>
+        </div>
+      </div>
+      <p class="fine">Reiki is a complementary practice. It is not a substitute for medical diagnosis or treatment. Please continue to follow the advice of your healthcare providers. &copy; 2026 Caroline Black.</p>
+    </div>
+  </footer>
+</body>
+</html>
